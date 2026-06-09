@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourisme au Japon - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🇯🇵 Découvrir le Japon</h1>
+    <p>Le pays du Soleil-Levant</p>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="villes.html">Villes à visiter</a>
+    <a href="culture.html">Culture</a>
+</nav>
+
+<main>
+    <section class="card">
+        <h2>Bienvenue</h2>
+        <p>
+            Le Japon est une destination unique qui mélange traditions
+            millénaires et technologies modernes. Entre temples,
+            montagnes, métropoles et gastronomie, chaque voyage est une
+            expérience inoubliable.
+        </p>
+
+        <h3>Date du jour</h3>
+        <p id="date"></p>
+
+        <h3>Heure actuelle</h3>
+        <p id="heure"></p>
+    </section>
+</main>
+
+<footer>
+    <p>Projet Web - Tourisme au Japon</p>
+</footer>
+
+<script>
+document.getElementById("date").textContent =
+new Date().toLocaleDateString("fr-FR");
+
+function updateClock() {
+    document.getElementById("heure").textContent =
+    new Date().toLocaleTimeString("fr-FR");
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>

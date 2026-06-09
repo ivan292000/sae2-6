@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture japonaise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🎎 Culture japonaise</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="villes.html">Villes à visiter</a>
+    <a href="culture.html">Culture</a>
+</nav>
+
+<main>
+    <section class="card">
+        <h2>Traditions</h2>
+        <p>
+            Le Japon conserve de nombreuses traditions comme la cérémonie
+            du thé, le port du kimono et les festivals saisonniers.
+        </p>
+
+        <h2>Gastronomie</h2>
+        <p>
+            Les sushis, les ramens, les tempuras et les mochis sont parmi
+            les spécialités japonaises les plus appréciées.
+        </p>
+
+        <h2>Hanami</h2>
+        <p>
+            Chaque printemps, les Japonais célèbrent la floraison des
+            cerisiers lors du Hanami.
+        </p>
+
+        <h3>Votre position géographique</h3>
+        <p id="geo">
+            Autorisez la géolocalisation pour afficher votre position.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>Plongez dans la richesse culturelle du Japon.</p>
+</footer>
+
+<script>
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        document.getElementById("geo").innerHTML =
+            "Latitude : " + position.coords.latitude.toFixed(4) +
+            "<br>Longitude : " + position.coords.longitude.toFixed(4);
+    });
+}
+</script>
+
+</body>
+</html>

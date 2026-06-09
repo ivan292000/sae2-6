@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villes à visiter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🏙️ Les villes incontournables</h1>
+</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="villes.html">Villes à visiter</a>
+    <a href="culture.html">Culture</a>
+</nav>
+
+<main>
+    <section class="card">
+        <h2>Tokyo</h2>
+        <p>
+            Capitale du Japon, Tokyo est célèbre pour ses quartiers
+            modernes, ses centres commerciaux et ses nombreuses
+            attractions culturelles.
+        </p>
+
+        <h2>Kyoto</h2>
+        <p>
+            Ancienne capitale impériale, Kyoto possède plus de
+            1 600 temples bouddhistes et de magnifiques jardins.
+        </p>
+
+        <h2>Osaka</h2>
+        <p>
+            Réputée pour sa gastronomie et son ambiance chaleureuse,
+            Osaka attire des millions de visiteurs chaque année.
+        </p>
+
+        <h3>Votre appareil</h3>
+        <p id="device"></p>
+    </section>
+</main>
+
+<footer>
+    <p>Découvrez les plus belles villes japonaises.</p>
+</footer>
+
+<script>
+const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+document.getElementById("device").textContent =
+isMobile
+? "Vous naviguez depuis un smartphone ou une tablette."
+: "Vous naviguez depuis un ordinateur.";
+</script>
+
+</body>
+</html>
